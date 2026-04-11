@@ -31,7 +31,6 @@ export const getQuestions = createAsyncThunk(
         } catch (err) {
           console.error("JSON Parse Failed:", err);
 
-          // محاولة تنظيف الرد (Gemini often wraps in ```json)
           const cleaned = response
             .replace(/```json/g, "")
             .replace(/```/g, "")
